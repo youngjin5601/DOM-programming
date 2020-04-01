@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event basics</title>
+  <style>
+    .img-list{
+      display: flex;
+      align-items: center;
+      justify-content:flex-start;
+      margin-bottom: 20px;
+    }
+  </style>
+  <script defer src="./eventBubbling.js"></script>
+</head>
+<body>
+  <section id="section-1">
+    <h1>이벤트 버블링을 이용한 이벤트 처리하기</h1>
+    <div class="img-list">
+      <img width="20%" src="./images/1.jpg" >
+      <img width="20%"  src="./images/2.jpg" >
+      <img width="20%"  src="./images/3.jpg" >
+    </div>
+    <div>
+      <img class="display"  src="./images/1.jpg">
+    </div>
+  </section>
+  <hr>
+  <section id="section-2">
+    <h1>stop propagation</h1>
+    <div class="img-list">
+      <img width="20%" src="./images/1.jpg" >
+      <img width="20%"  src="./images/2.jpg" >
+      <img width="20%"  src="./images/3.jpg" >
+      <input type="button" value="Add img">
+    </div>
+    <div class="img-list2">
+      <img class="display"  src="./images/1.jpg">
+    </div>
+  </section>
+  
+</body>
+</html>
