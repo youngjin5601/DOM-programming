@@ -35,10 +35,31 @@
       <img width="20%"  src="./images/3.jpg" >
       <input type="button" value="Add img">
     </div>
-    <div class="img-list2">
+    <div class="current-img">
       <img class="display"  src="./images/1.jpg">
     </div>
   </section>
-  
+  <hr>
+  <section id="section-3">
+    <style>
+      .file-button{
+        display:none;
+      }
+      .trigger-button{
+        background: rgb(49, 49, 224);
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        border: 1px solid rgb(127, 127, 228);
+        cursor: pointer;
+      }
+      .trigger-button:hover{
+        background: chartreuse;
+      }
+    </style>
+    <h1>event trigger</h1>
+    <input type="file" class="file-button">
+    <span class="trigger-button">file selection</span>
+  </section>
 </body>
 </html>
