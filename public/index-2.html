@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+    }
+    div{
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border: 1px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Position</h1>
+  <div></div>
+  <div></div>
+
+  <script>
+    window.addEventListener('click',(e)=>{
+      console.log("("+e.x+","+e.y+")")
+      console.log("("+e.clientX+","+e.clientY+")")
+      console.log("("+e.pageX+","+e.pageY+")")
+      console.log("("+e.offsetX+","+e.offsetY+")")
+
+      const pt=document.createElement('span')
+
+      pt.textContent="o("+e.pageX+","+e.pageY+")"+"["+e.offsetX+","+e.offsetY+"]"
+      pt.style.position="absolute"
+      pt.style.left=e.pageX+"px"
+      pt.style.top=e.pageY+"px"
+      document.body.append(pt)
+    })
+  </script>
+</body>
+</html>
